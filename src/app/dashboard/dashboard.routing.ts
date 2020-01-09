@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
-import { HomeComponent } from '../admin/home/home.component';
+import { Home2Component } from '../dashboard/home/home.component';
 import { AuthGuardGuard } from '../shared/guards/AuthGuard/auth-guard.guard';
+import { AddPassengerTicketComponent } from './add-passenger-ticket/add-passenger-ticket.component';
 
 export const DashBoardRoutes: Routes = [
     {
@@ -15,12 +16,12 @@ export const DashBoardRoutes: Routes = [
             },
             {
                 path: 'index',
-                component: IndexComponent
+                component: Home2Component
             },
-            //     {
-            //       path: 'addproduct',
-            //       component: AddProductComponent
-            //     },
+            {
+                path: 'addPassenger',
+                component: AddPassengerTicketComponent
+            }
             //     {
             //       path: 'register',
             //       component: RegisterComponent
@@ -30,10 +31,5 @@ export const DashBoardRoutes: Routes = [
             //         component: ProductDetailComponent
             //     },
         ]
-    },
-    {
-        path: 'home',
-        component: HomeComponent,
-        canActivate: [AuthGuardGuard]
     }
 ];

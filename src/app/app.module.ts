@@ -6,18 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutes } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './admin/home/home.component';
-import { HeaderComponent } from './admin/header/header.component';
-import { LoginComponent } from './admin/login/login.component';
-import { RegisterComponent } from './admin/register/register.component';
-import { LoginServiceService } from './shared/service/login-service.service';
 import { ErrorModule } from './error/error.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AdminModule } from './admin/admin.module';
 import { CloudinaryModule } from '@cloudinary/angular-5.x';
 import * as  Cloudinary from 'cloudinary-core';
 import { RouterModule } from '@angular/router';
-import { IndexComponent } from './dashboard/index/index.component';
+import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +20,7 @@ import { IndexComponent } from './dashboard/index/index.component';
   ],
   imports: [
     DashboardModule,
+    DynamicFormModule,
     AdminModule,
     ErrorModule,
     SharedModule,
