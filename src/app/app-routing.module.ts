@@ -9,7 +9,7 @@ import { NoAccessComponent } from './error/no-access/no-access.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: '/login', pathMatch: 'full', canActivate: [LoginGuard] },
+  { path: "", redirectTo: '', pathMatch: 'full', canActivate: [LoginGuard] },
   { path: "login", component: LoginComponent, canActivate: [LoginGuard] },
   { path: "home", component: HomeComponent, canActivate: [AuthGuardGuard] },
   { path: "register", component: RegisterComponent, canActivate: [LoginGuard] },
@@ -24,7 +24,7 @@ const routes: Routes = [
 export const AppRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '',
     pathMatch: 'full'
   },
   {
@@ -32,7 +32,7 @@ export const AppRoutes: Routes = [
     loadChildren: './admin/admin.module#AdminModule'
   },
   {
-    path: 'dashboard',
+    path: '',
     loadChildren: './dashboard/dashboard.module#DashboardModule'
   },
   { path: 'no-access', component: NoAccessComponent },

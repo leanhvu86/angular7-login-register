@@ -52,19 +52,19 @@ export class AddPassengerTicketComponent implements AfterViewInit {
     //   type: 'button'
     // },
     {
-      type: 'select',
+      type: 'input',
       label: 'Trường học',
-      name: 'food',
+      name: 'school',
       options: ['Pizza', 'Hot Dogs', 'Knakworstje', 'Coffee'],
-      placeholder: 'Select an option',
+      placeholder: 'Tên trường học hiện tại nếu có',
       validation: [Validators.required]
     },
     {
-      type: 'select',
+      type: 'input',
       label: 'Tỉnh khai sinh',
       name: 'province',
       options: [],
-      placeholder: 'Select an option',
+      placeholder: 'Tỉnh khai sinh',
       validation: [Validators.required]
     },
     {
