@@ -38,7 +38,7 @@ export class AccordionComponent implements AfterContentInit {
    * Open an accordion group
    * @param group   Group instance
    */
-  openGroup(group: Group) {
+  openGroup(group: AccordionGroupComponent) {
     // close other groups
     this.groups.toArray().forEach((t) => t.opened = false);
     // open current group
