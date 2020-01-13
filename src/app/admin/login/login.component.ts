@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
+    console.log(this.userObject.email + " user đăng nhập");
     this._loginService.loginAuth(this.userObject).subscribe((data) => {
       this.errorMessage = null;
       if (data.body['status'] === 200) {

@@ -34,6 +34,8 @@ export class RegisterComponent implements OnInit {
         setTimeout(() => {
           this._router.navigate(['/login']);
         }, 2000);
+      } else {
+        this.errorMessage = result['message'];
       }
     });
   }

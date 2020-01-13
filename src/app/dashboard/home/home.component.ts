@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
+declare var $: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,5 +12,6 @@ export class Home2Component implements OnInit {
 
   ngOnInit() {
   }
-
 }
+
+

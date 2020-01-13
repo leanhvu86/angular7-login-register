@@ -10,12 +10,15 @@ import { AboutComponent } from './about/about.component';
 import { RoutingComponent } from './routing/routing.component';
 import { AccordionGroupComponent } from './accordion/accordion-group.component';
 import { AccordionComponent } from './accordion/accordion.component';
+import { CounterModule } from 'ngx-counter';
+
 @NgModule({
   declarations: [IndexComponent, AddPassengerTicketComponent, Home2Component, AboutComponent, RoutingComponent, AccordionGroupComponent, AccordionComponent],
   imports: [
     CommonModule,
     DynamicFormModule,
     RouterModule.forChild(DashBoardRoutes),
+    CounterModule.forRoot(),
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
