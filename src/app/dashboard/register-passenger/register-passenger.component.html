@@ -1,0 +1,86 @@
+<div class="card m-4">
+  <h5 class="card-header">THÔNG TIN ĐĂNG KÝ VÉ THÁNG</h5>
+  <div class="card-body">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <!-- <div class="form-row"> -->
+      <div class="form-group col-4">
+        <label>Tỉnh khai sinh</label>
+        <select formControlName="province" class="form-control" [(ngModel)]="passenger.province"
+          [ngClass]="{ 'is-invalid': submitted && f.province.errors }">
+          <option *ngFor="let province of provinces" value={{province}}>
+            {{province.provinceName}}
+          </option>
+        </select>
+        <div *ngIf="submitted && f.province.errors" class="invalid-feedback">
+          <div *ngIf="f.province.errors.required">Bạn phải chọn tỉnh khai sinh</div>
+        </div>
+      </div>
+      <div class="form-group col-4">
+        <label>Họ và tên</label>
+        <input type="text" formControlName="firstName" class="form-control" [(ngModel)]="passenger.name"
+          [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+          <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+      </div>
+      <div class="form-group col-4">
+        <label>Địa chỉ thường trú</label>
+        <input type="text" formControlName="address" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+        <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+          <div *ngIf="f.address.errors.required">Vui lòng điền địa chỉ</div>
+        </div>
+      </div>
+      <!-- </div> -->
+      <div class="form-group col-4">
+        <label>Email</label>
+        <input type="text" formControlName="email" class="form-control" [(ngModel)]="passenger.email"
+          [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">Vui lòng điền email</div>
+          <div *ngIf="f.email.errors.email">Email không hợp lệ</div>
+        </div>
+      </div>
+      <!-- <div class="form-row"> -->
+      <div class="form-group col-4">
+        <label>Ngày sinh</label>
+        <input type="date" formControlName="birthday" class="form-control" [(ngModel)]="passenger.birthday"
+          [ngClass]="{ 'is-invalid': submitted && f.birthday.errors }" />
+        <div *ngIf="submitted && f.birthday.errors" class="invalid-feedback">
+          <div *ngIf="f.birthday.errors.required">Vui lòng điền ngày sinh</div>
+        </div>
+      </div>
+      <div class="form-group col-4">
+        <label>Mã thẻ căn cước</label>
+        <input type="number" formControlName="idNo" class="form-control" [(ngModel)]="passenger.idNo"
+          [ngClass]="{ 'is-invalid': submitted && f.idNo.errors }" />
+        <div *ngIf="submitted && f.idNo.errors" class="invalid-feedback">
+          <div *ngIf="f.idNo.errors.required">Confirm birthday is required</div>
+        </div>
+      </div>
+      <!-- </div> -->
+      <!-- <div class="form-group col-4">
+        <label>Trường đang học</label>
+        <select formControlName="education" class="form-control" [(ngModel)]="passenger.education"
+          [ngClass]="{ 'is-invalid': submitted && f.education.errors }">
+          <option *ngFor="let province of provinces" value={{province}}>
+            {{province.provinceName}}
+          </option>
+        </select>
+      </div> -->
+      <app-combo-box [list]="itemList"></app-combo-box>
+      <div class="form-group form-check">
+        <input type="checkbox" formControlName="agree" id="agree" class="form-check-input"
+          [ngClass]="{ 'is-invalid': submitted && f.agree.errors }" />
+        <label for="agree" class="form-check-label">Tôi đồng ý với điều khoản và hướng dẫn</label>
+        <div *ngIf="submitted && f.agree.errors" class="invalid-feedback">Vui lòng đồng ý với điều khoản và hướng dẫn
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary mr-1">Register</button>
+        <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+      </div>
+    </form>
+
+  </div>
+</div>

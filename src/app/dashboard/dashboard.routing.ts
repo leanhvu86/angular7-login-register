@@ -2,9 +2,10 @@ import { Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { Home2Component } from '../dashboard/home/home.component';
 import { AuthGuardGuard } from '../shared/guards/AuthGuard/auth-guard.guard';
-import { AddPassengerTicketComponent } from './add-passenger-ticket/add-passenger-ticket.component';
 import { AboutComponent } from './about/about.component';
 import { RoutingComponent } from './routing/routing.component';
+import { RegisterPassengerComponent } from './register-passenger/register-passenger.component';
+import { ComboBoxComponent } from './combo-box/combo-box.component';
 
 export const DashBoardRoutes: Routes = [
     {
@@ -22,7 +23,7 @@ export const DashBoardRoutes: Routes = [
             },
             {
                 path: 'addPassenger',
-                component: AddPassengerTicketComponent
+                component: RegisterPassengerComponent
             },
             {
                 path: 'about',
@@ -31,6 +32,10 @@ export const DashBoardRoutes: Routes = [
             {
                 path: 'routing',
                 component: RoutingComponent
+            },
+            {
+                path: 'combobox',
+                component: ComboBoxComponent
             },
         ]
     }

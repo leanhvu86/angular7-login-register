@@ -12,6 +12,10 @@ export const AdminRoutes: Routes = [
         component: RegisterComponent
     },
     {
+        path: 'station',
+        component: StationComponent
+    },
+    {
         path: 'admin', component: HomeComponent,
         canActivate: [AuthGuardGuard],// <- this line is added
         children: [

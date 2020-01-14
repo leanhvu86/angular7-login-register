@@ -12,7 +12,7 @@ export class ProvinceService {
   private baseUrl: string = 'http://localhost:8000';
   constructor(private _http: HttpClient) {
   }
-  provinces: Province[] = [];
+
   private log(message: string) {
     console.log('loi province service' + message);
   }
@@ -58,13 +58,7 @@ export class ProvinceService {
         tap(_ => console.log('load province'))
       );
   }
-  getProvinceArray() {
-    this.getProvinces().subscribe(provinces => {
-      this.provinces = provinces;
-      console.log('province' + this.provinces);
 
-    })
-  }
   //   return this._http.get(`${this.baseUrl}/provinces`, { observe: 'response' });
   // }
 

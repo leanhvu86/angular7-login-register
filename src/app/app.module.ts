@@ -12,7 +12,6 @@ import { AdminModule } from './admin/admin.module';
 import { CloudinaryModule } from '@cloudinary/angular-5.x';
 import * as  Cloudinary from 'cloudinary-core';
 import { RouterModule } from '@angular/router';
-import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
   ],
   imports: [
     DashboardModule,
-    DynamicFormModule,
     AdminModule,
     ErrorModule,
     SharedModule,
