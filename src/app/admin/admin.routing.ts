@@ -11,28 +11,28 @@ export const AdminRoutes: Routes = [
         path: 'register',
         component: RegisterComponent
     },
+    // {
+    //     path: 'station',
+    //     component: StationComponent
+    // },
     {
-        path: 'station',
-        component: StationComponent
-    },
-    {
-        path: 'admin', component: HomeComponent,
+        path: '', component: HomeComponent,
         canActivate: [AuthGuardGuard],// <- this line is added
         children: [
             {
-                path: 'admin',
+                path: '',
                 redirectTo: 'home',
                 pathMatch: 'full'
             },
 
             {
                 path: 'home',
-                component: HomeComponent
-            },
-            {
-                path: 'station',
                 component: StationComponent
             },
+            // {
+            //     path: 'station',
+
+            // },
             // {
             //     path: 'product-info',
             //     component: ProductInfoComponent

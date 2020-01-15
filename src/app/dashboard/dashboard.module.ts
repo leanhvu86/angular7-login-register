@@ -14,7 +14,15 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ComboBoxComponent } from './combo-box/combo-box.component';
 
 @NgModule({
-  declarations: [IndexComponent, Home2Component, AboutComponent, RoutingComponent, AccordionGroupComponent, AccordionComponent, RegisterPassengerComponent, ComboBoxComponent],
+  declarations: [
+    IndexComponent,
+    Home2Component,
+    AboutComponent,
+    RoutingComponent,
+    AccordionGroupComponent,
+    AccordionComponent,
+    RegisterPassengerComponent,
+    ComboBoxComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(DashBoardRoutes),
