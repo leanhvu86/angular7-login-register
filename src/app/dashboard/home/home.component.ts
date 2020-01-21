@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 declare var $: any;
 @Component({
@@ -8,7 +9,9 @@ declare var $: any;
 })
 export class Home2Component implements OnInit {
 
-  constructor() { }
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('vi');
+  }
 
   ngOnInit() {
   }

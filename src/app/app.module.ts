@@ -12,6 +12,7 @@ import { AdminModule } from './admin/admin.module';
 import { CloudinaryModule } from '@cloudinary/angular-5.x';
 import * as  Cloudinary from 'cloudinary-core';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { RouterModule } from '@angular/router';
         //npprivate_cdn: true, 
         cname: 'mycompany.images.com'
       }),
+    BrowserAnimationsModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

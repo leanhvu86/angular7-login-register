@@ -243,7 +243,12 @@
                             <!-- Start Social Links -->
                             <ul class="social-list">
                                 <li>
-                                    <a href="#"><i class="fa fa-rss"></i></a>
+                                    <a><i (click)="useLanguage('vi')"><img style="height: auto;width:50%;"
+                                                src="../../../assets/images/vi.png" /></i></a>
+                                </li>
+                                <li>
+                                    <a><i (click)="useLanguage('en')"><img style="height: auto;width:50%;"
+                                                src="../../../assets/images/en.png" /></i></a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -259,12 +264,6 @@
                                 </li>
                                 <li>
                                     <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-flickr"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-vimeo-square"></i></a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fa fa-skype"></i></a>
@@ -293,10 +292,10 @@
                     </path>
                 </svg>
             </a>
-            <a class="py-2 d-none d-md-inline-block" routerLink="/index">Trang chủ</a>
-            <a class="py-2 d-none d-md-inline-block" routerLink="/routing">Tuyến hoạt động</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Dịch vụ</a>
-            <a class="py-2 d-none d-md-inline-block" routerLink="/about">Giới thiệu</a>
+            <a class="py-2 d-none d-md-inline-block" routerLink="/index">{{ 'index.home' | translate }}</a>
+            <a class="py-2 d-none d-md-inline-block" routerLink="/routing">{{ 'index.routing' | translate }}</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">{{ 'index.servie' | translate }}</a>
+            <a class="py-2 d-none d-md-inline-block" routerLink="/about">{{ 'index.about' | translate }}</a>
             <a class="py-2 d-none d-md-inline-block" href="#"></a>
             <a class="py-2 d-none d-md-inline-block" href="#"></a>
             <a class="py-2 d-none d-md-inline-block" href="#"></a>
@@ -305,7 +304,7 @@
             <a class="py-2 d-none d-md-inline-block" href="#"></a>
             <a class="py-2 d-none d-md-inline-block" href="#"></a>
             <a class="py-2 d-none d-md-inline-block" href="#"></a>
-            <a class="py-2 d-none d-md-inline-block" routerLink="/addPassenger">Đăng ký</a>
+            <a class="py-2 d-none d-md-inline-block" routerLink="/addPassenger">{{ 'index.register' | translate }}</a>
         </div>
     </nav>
 
@@ -350,8 +349,8 @@
                         <div class="carousel-caption text-right">
                             <h1></h1>
                             <div style="margin-right: -15%;width: 50%; padding:1px; opacity: 0.8;;margin-left: 70%;">
-                                <strong style="color: white;font-size: 20px;z-index: 1000;">NÂNG CAO CHẤT
-                                    LƯỢNG PHỤC VỤ</strong>
+                                <strong
+                                    style="color: white;font-size: 20px;z-index: 1000;">{{ 'index.slider' | translate }}</strong>
                             </div>
                             <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Chi tiết</a></p> -->
                         </div>
@@ -373,26 +372,43 @@
         <div class="col" style="padding: 2%;"><img
                 style="height: 100%;width:100%;border-radius: 50%;display:block; box-shadow: 0 8px 6px -6px black;"
                 src="../../../assets/images/05.jpg" title="Tái sử dụng hệ thống ga cũ" />
-            <a style="padding: 4% 20%;">Ga Long Biên</a>
+            <a style="padding: 4% 20%;">{{ 'Longbien.station' | translate }}</a>
         </div>
         <div class="col" style="padding: 2%;">
             <img style="height: 100%;width:90%;border-radius: 50%;display:block; box-shadow: 0 8px 6px -6px black;"
                 src="../../../assets/images/8.jpg" title="Ga Hà Nội" />
-            <a style="padding:4% 20%;">Ga Hàng Cỏ</a>
+            <a style="padding:4% 20%;">{{ 'hangco.station' | translate }}</a>
         </div>
         <div class="col" style="padding: 2%;">
             <img style="height: 100%;width:90%;border-radius: 50%; display:block; box-shadow: 0 8px 6px -6px black;"
                 src="../../../assets/images/10.jpg" title="Phát triển dịch vụ phúc lợi" />
-            <a style="padding:4% 20%;">Ga Long Biên</a>
+            <a style="padding:4% 20%;">{{ 'hanoi.station' | translate }}</a>
         </div>
         <div class="col" style="padding: 2%;">
             <img style="height: 100%;width:90%;border-radius: 50%;display:block; box-shadow: 0 8px 6px -6px black;"
                 src=" ../../../assets/images/151.jpg" title="Phát triển đô thị toàn diện" />
-            <a style="padding: 4% 0;">Phát triển Hà Nội diện mạo mới</a>
+            <a style="padding: 4% 0;">{{ 'hanoi.higherview' | translate }}</a>
         </div>
     </div>
-
-
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col">
+                <fb-like url={{url}}></fb-like>
+            </div>
+            <div class="col">
+                <google-plus url={{url}}></google-plus>
+            </div>
+            <div class="col">
+                <tweet url={{url}} text={{text}}></tweet>
+            </div>
+            <div class="col">
+                <linkedin-share url={{url}}></linkedin-share>
+            </div>
+            <div class="col">
+                <pin-it url={{url}} media={{imageUrl}} description={{text}}></pin-it>
+            </div>
+        </div>
+    </div>
     <router-outlet></router-outlet>
 
     <footer style="background-color: black;backdrop-filter: saturate(240%) blur(20px);width: 100%;margin-top: 5%;">
