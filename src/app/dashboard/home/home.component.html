@@ -21,12 +21,10 @@ background: linear-gradient(90deg, rgba(182,177,246,1) 0%, rgba(222,222,240,1) 3
     <div class="col align-self-center">
       <a style="color: black;text-decoration: none; display: block;"><img
           style="border: 1% solid white; height: 100%;width:100%;" src="../../../assets/images/3.jpg">
-        Grafity đường phố
+        {{ 'street.graffiti' | translate }}
       </a>
-      <a style="font-size: 12px; padding: 2%;">Grafity là một môn nghệ thuật phổ biến trên khắp thế giới. Những nghệ
-        nhân biến những bức tường, những cây cột vô tri biết nói. Chủ trương của Thành phố cho phép những nghệ sỹ
-        Grafity xây dựng nhà ga biết thổ lộ, ngay trên những tường ga là các tác phẩm nói về cuộc sống chân thực, giản
-        đơn và đầy màu săc với bao tâm huyết của các thế hệ đi trước</a>
+      <a style="font-size: 12px; padding: 2%;">{{ 'street.grafiti.station' | translate }}
+      </a>
     </div>
     <div class="col align-self-end">
     </div>
@@ -39,11 +37,9 @@ background: linear-gradient(90deg, rgba(182,177,246,1) 0%, rgba(222,222,240,1) 3
     </div>
     <div class="col align-self-end">
       <a style="color: black;text-decoration: none; display: block;">
-        Quy hoạch quảng cáo đô thị
+        {{ 'arrangement.advertisement.city' | translate }}
       </a>
-      <a style="font-size: 12px; padding: 2%;margin-bottom: 5%;">Quy hoạch phát triển quảng cáo đô thị được hoạch định
-        lại và các nhà ga
-        góp phần không nhỏ vào doanh thu của thành phố</a>
+      <a style="font-size: 12px; padding: 2%;margin-bottom: 5%;"> {{ 'arrangement.city' | translate }}</a>
       <a href="https://wall.alphacoders.com/big.php?i=661419"><img
           style=" height: 100%;width:100%;border: 1% solid white;" src="../../../assets/images/subway.jpg"></a>
     </div>
@@ -82,8 +78,8 @@ background: linear-gradient(90deg, rgba(182,177,246,1) 0%, rgba(222,222,240,1) 3
       </div>
       <i class="fa fa-calendar-check-o"></i>
 
-      <p>Duy trì tỉ lệ chạy đúng giờ cho các tàu, nhất là giờ cao điểm</p>
-      <h3>Chạy đúng giờ</h3>
+      <p>{{ 'ontime' | translate }}</p>
+      <h3>{{ 'start.ontime' | translate }}</h3>
     </div>
   </div>
   <div class="col-xs-12 col-sm-3 col-md-3 wow fadeInDown" data-wow-duration="2s" data-wow-delay="300ms">
@@ -94,8 +90,8 @@ background: linear-gradient(90deg, rgba(182,177,246,1) 0%, rgba(222,222,240,1) 3
       </div>
       <i class="fa fa-cogs"></i>
 
-      <p>Số lái tàu đào tạo chuyên môn cao luôn đáp ứng nhu cầu cho hệ thống </p>
-      <h3>Vận hành tốt</h3>
+      <p>{{ 'train.driver.service' | translate }}</p>
+      <h3>{{ 'good.operation' | translate }}</h3>
     </div>
   </div>
   <div class="col-xs-12 col-sm-3 col-md-3 wow fadeInRight" data-wow-duration="2s" data-wow-delay="300ms">
@@ -108,12 +104,12 @@ background: linear-gradient(90deg, rgba(182,177,246,1) 0%, rgba(222,222,240,1) 3
       <i class="fa fa-male">
       </i>
 
-      <p>Phục vụ tổng số hành khách mỗi ngày trung bình 12000 lượt khách/mỗi tàu</p>
-      <h3>Lưu lượng khách</h3>
+      <p>{{ 'train.service' | translate }}</p>
+      <h3>{{ 'passenger.flows' | translate }}</h3>
     </div>
   </div>
 </div>
-<a style="font-weight: inherit;">Các tuyến tàu điện chính Hà Nội</a>
+<a style="font-weight: inherit;">{{ 'main.route' | translate }}</a>
 <iframe style="margin: 5% 2%;"
   src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14896.098622893422!2d105.84143963988559!3d21.03169944351326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1578733492165!5m2!1sen!2s"
   width="100%" height="400px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>

@@ -142,9 +142,9 @@
             border-right: 1px solid #f2f2f2;
         }
 
-        ul.social-list li a:hover {
+        /* ul.social-list li a:hover {
             background: black;
-        }
+        } */
 
 
         ul.social-list li a i {
@@ -241,33 +241,41 @@
 
                         <div class="col-md-6">
                             <!-- Start Social Links -->
-                            <ul class="social-list">
+                            <ul class="social-list" style="padding-top: 1%;">
                                 <li>
-                                    <a><i (click)="useLanguage('vi')"><img style="height: auto;width:50%;"
+                                    <a><i (click)="useLanguage('vi')"><img
+                                                style="height: auto;width:50%; margin-top: -15%;"
                                                 src="../../../assets/images/vi.png" /></i></a>
                                 </li>
                                 <li>
-                                    <a><i (click)="useLanguage('en')"><img style="height: auto;width:50%;"
+                                    <a><i (click)="useLanguage('en')"><img
+                                                style="height: auto;width:50%;margin-top: -15%;"
                                                 src="../../../assets/images/en.png" /></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#">
+                                        <fb-like url={{url}}></fb-like>
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a style="padding-top: 5px;">
+                                        <tweet url={{url}} text={{text}}></tweet>
+                                    </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#"><i class="fa fa-google-plus"></i></a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fa fa-youtube"></i></a>
-                                </li>
+                                </li> -->
                                 <li>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#">
+                                        <linkedin-share url={{url}}></linkedin-share>
+                                    </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#"><i class="fa fa-skype"></i></a>
-                                </li>
+                                </li> -->
                             </ul>
                             <!-- End Social Links -->
                         </div><!-- .col-md-6 -->
@@ -396,16 +404,10 @@
                 <fb-like url={{url}}></fb-like>
             </div>
             <div class="col">
-                <google-plus url={{url}}></google-plus>
-            </div>
-            <div class="col">
                 <tweet url={{url}} text={{text}}></tweet>
             </div>
             <div class="col">
                 <linkedin-share url={{url}}></linkedin-share>
-            </div>
-            <div class="col">
-                <pin-it url={{url}} media={{imageUrl}} description={{text}}></pin-it>
             </div>
         </div>
     </div>
