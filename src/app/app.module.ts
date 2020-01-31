@@ -27,7 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RouterModule.forRoot(AppRoutes),
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: 'never' }),
     CloudinaryModule.forRoot(Cloudinary,
       {
         cloud_name: 'mycompany', upload_preset: 'mypreset',

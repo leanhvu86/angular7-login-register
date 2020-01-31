@@ -1,3 +1,8 @@
+:host{
+  position: relative;
+  display: block;
+  color: black;
+}
 .mypanel {
     background-color: white;
     color: #222;
@@ -5,7 +10,9 @@
   }
   
   .mypanel .title {
-    
+    padding-left: 5%;
+    text-decoration: none;
+    color: #222;
 border: 1px solid rgba(0, 0, 0, 0.1);
 background-image: -webkit-gradient(linear,left top,left bottom,from(#F5F5F5),to(#F1F1F1));
 background-image: -webkit-linear-gradient(top,#F5F5F5,#F1F1F1);
@@ -30,6 +37,8 @@ border-radius: 2px;
     background-image: -o-linear-gradient(top,#F5F5F5,#F1F1F1);
     background-image: linear-gradient(top,#F5F5F5,#F1F1F1); */
     border: 1px solid #DCDCDC;
+    color: black;
+    text-decoration: none;
     /* border-radius: 2px;
         width: 100%;
         padding: 10px; */
@@ -39,10 +48,12 @@ border-radius: 2px;
       }
   
   .mypanel .body {
-    padding: 10px;
+    /* padding: 10px; */
+    padding-left: 10%;
   }
   
   .mypanel .body.hidden {
     display: none;
+    padding-left: 5%;
   }
  

@@ -3,16 +3,14 @@
     <h2
       style="color: #2b2da5; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0;">
       {{ 'main.route' | translate }}</h2>
-
-    <accordion>
-      <group title="Tuyến số 1">
-        <strong> Hồ Gươm </strong> - {{ 'hanoi.station' | translate }} - Công viên Lê Nin - <strong>Bến xe Kim
-          Mã</strong> - Khách sạn
-        Deawoo - <strong>Khách sạn Cầu Giấy</strong> - Đại học sư pham Hà Nội - <strong>Nghĩa trang Mai
-          Dịch</strong> -
-        Văn Tiến Dũng - <strong>Đại học Nhổn</strong>
-      </group>
-      <group title="Tuyến số 2">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <app-example *ngFor="let data of accordianData" [data]="data" class="panel panel-default"></app-example>
+    </div>
+    <!-- <accordion>
+      <group *ngFor="let routeRail of routeRails" title={{routeRail.nameRoute}}>
+        {{routeRail.description}}
+      </group> -->
+    <!-- <group title="Tuyến số 2">
         <strong>Cát Linh</strong> - Hoàng Cầu - Thái Thịnh - Chính Kinh - <strong>Đại học Hà Nội</strong> -
         Hồ Gươm Plaza - <strong>Bưu điện Hà Đông</strong> - Khu đô thị Văn Phú - <strong>Bến xe Yên
           Nghĩa</strong>
@@ -57,8 +55,8 @@
         <strong>Khu đô thị Ciputra(PVD)</strong> - Bộ công an Phạm Văn Đồng - <strong>Đại học sư phạm Hà
           Nội</strong>- <strong>Trung tâm hội nghị Quốc Gia</strong> - <strong>Đại học Hà
           Nội</strong> - Hồ Gươm Plaza - Bưu điện Hà Đông - Khu đô thị Văn Phú - <strong>Bến xe Yên Nghĩa</strong>
-      </group>
-    </accordion>
+      </group> -->
+    <!-- </accordion> -->
 
   </div>
   <div class="col">

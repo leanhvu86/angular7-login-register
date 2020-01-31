@@ -10,11 +10,15 @@ export class IndexComponent implements OnInit {
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('vi');
+    sessionStorage.setItem('currentLang', 'vi');
   }
 
   ngOnInit() {
   }
   useLanguage(language: string) {
     this.translate.use(language);
+    console.log(language);
+    sessionStorage.setItem('currentLang', language);
+
   }
 }

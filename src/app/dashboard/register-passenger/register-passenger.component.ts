@@ -17,7 +17,7 @@ export class RegisterPassengerComponent implements OnInit {
   provinces: Province[] = [];
   passenger = new Passenger();
   constructor(private formBuilder: FormBuilder, private provinceService: ProvinceService) { }
-
+  public show: boolean = false;
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
       province: ['', Validators.required],
@@ -26,13 +26,23 @@ export class RegisterPassengerComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       birthday: ['', [Validators.required]],
       idNo: ['', Validators.required],
+      typeOfPassenger: [''],
       education: [''],
       agree: [false, Validators.requiredTrue]
     });
     this.getProvinceArray();
   }
   get f() { return this.registerForm.controls; }
+  myDropDown: string;
 
+  onChangeofOptions(value: any) {
+    console.log(value);
+    if (value === 'Student') {
+      this.show = true;
+    } else {
+      this.show = false;
+    }
+  }
   onSubmit() {
     this.submitted = true;
 
@@ -40,6 +50,7 @@ export class RegisterPassengerComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     } else {
+      this.passenger = this.registerForm.value;
       alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.passenger, null, 4));
     }
 
